@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="S.R.I Industrial Valves - Industrial valve products, technical service and quotation support.">
-<title>S.R.I Industrial Valves | Industrial Flow Solutions</title>
+<meta name="description" content="S.R.I Industrial Valves - Industrial valves, flow control products, technical support and quotation services.">
+<title>S.R.I Industrial Valves | Industrial Flow Control Solutions</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
@@ -12,6 +12,7 @@
 :root{
   --navy:#092B4C;
   --blue:#075A8D;
+  --blue2:#0B79B5;
   --blue-light:#EAF3F8;
   --orange:#F47B20;
   --orange-dark:#D95D0B;
@@ -23,7 +24,11 @@
   --shadow:0 12px 30px rgba(9,43,76,.09);
 }
 
-*{box-sizing:border-box;margin:0;padding:0}
+*{
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
+}
 
 html{
   scroll-behavior:smooth;
@@ -33,14 +38,27 @@ html{
 body{
   font-family:Barlow,Arial,sans-serif;
   color:var(--text);
-  background:var(--white);
+  background:#fff;
   line-height:1.6;
   overflow-x:hidden;
 }
 
-a{text-decoration:none;color:inherit}
-button,input,select,textarea{font:inherit}
-.container{width:min(1180px,92%);margin:auto}
+a{
+  text-decoration:none;
+  color:inherit;
+}
+
+button,
+input,
+select,
+textarea{
+  font:inherit;
+}
+
+.container{
+  width:min(1180px,92%);
+  margin:auto;
+}
 
 /* TOP BAR */
 .topbar{
@@ -57,10 +75,15 @@ button,input,select,textarea{font:inherit}
   gap:20px;
 }
 
-.topbar a{color:#fff}
-.topbar a:hover{color:#ffad7d}
+.topbar a{
+  color:#fff;
+}
 
-/* HEADER */
+.topbar a:hover{
+  color:#ffad7d;
+}
+
+/* NAVIGATION */
 .header{
   position:sticky;
   top:0;
@@ -109,21 +132,23 @@ button,input,select,textarea{font:inherit}
 .nav-links{
   display:flex;
   align-items:center;
-  gap:23px;
+  gap:21px;
   list-style:none;
 }
 
 .nav-links a{
   color:var(--navy);
-  font-size:.77rem;
+  font-size:.75rem;
   font-weight:800;
-  letter-spacing:.035em;
+  letter-spacing:.03em;
 }
 
-.nav-links a:hover{color:var(--orange)}
+.nav-links a:hover{
+  color:var(--orange);
+}
 
 .nav-links .quote-link{
-  padding:11px 17px;
+  padding:11px 16px;
   border-radius:4px;
   color:#fff;
   background:var(--orange);
@@ -152,17 +177,21 @@ button,input,select,textarea{font:inherit}
   background:var(--navy);
 }
 
-/* SECTIONS */
-.page-section{
-  min-height:100vh;
-  padding:105px 0 80px;
-  display:flex;
-  align-items:center;
+/* GENERAL */
+.section{
+  padding:100px 0;
 }
 
-.light{background:var(--bg)}
-.dark{background:var(--navy);color:#fff}
-.blue{
+.section-light{
+  background:var(--bg);
+}
+
+.section-dark{
+  background:var(--navy);
+  color:#fff;
+}
+
+.section-blue{
   background:linear-gradient(120deg,#075A8D,#092B4C);
   color:#fff;
 }
@@ -175,17 +204,34 @@ button,input,select,textarea{font:inherit}
   text-transform:uppercase;
 }
 
-h1,h2,h3{line-height:1.1}
+h1,
+h2,
+h3{
+  line-height:1.1;
+}
+
+h1{
+  color:var(--navy);
+  font-size:clamp(3rem,6vw,5.8rem);
+  letter-spacing:-.04em;
+}
 
 h2{
   margin:12px 0 17px;
   color:var(--navy);
-  font-size:clamp(2.4rem,5vw,4.4rem);
+  font-size:clamp(2.35rem,5vw,4.3rem);
   letter-spacing:-.035em;
 }
 
-.dark h2,.blue h2{color:#fff}
-h2 span{color:var(--orange)}
+.section-dark h2,
+.section-blue h2{
+  color:#fff;
+}
+
+h2 span,
+h1 span{
+  color:var(--orange);
+}
 
 .intro{
   max-width:680px;
@@ -193,7 +239,17 @@ h2 span{color:var(--orange)}
   font-size:1rem;
 }
 
-.dark .intro,.blue .intro{color:#c8dbe6}
+.section-dark .intro,
+.section-blue .intro{
+  color:#c8dbe6;
+}
+
+.buttons{
+  display:flex;
+  gap:13px;
+  flex-wrap:wrap;
+  margin-top:28px;
+}
 
 .btn{
   display:inline-flex;
@@ -228,17 +284,13 @@ h2 span{color:var(--orange)}
   border-color:#fff;
 }
 
-.buttons{
-  display:flex;
-  gap:13px;
-  flex-wrap:wrap;
-  margin-top:28px;
-}
-
 /* HOME */
 #home{
-  position:relative;
+  min-height:720px;
+  display:flex;
+  align-items:center;
   overflow:hidden;
+  position:relative;
 }
 
 .home-grid{
@@ -250,11 +302,7 @@ h2 span{color:var(--orange)}
 
 .home-content h1{
   margin:18px 0;
-  font-size:clamp(3rem,6vw,5.9rem);
-  color:var(--navy);
 }
-
-.home-content h1 span{color:var(--orange)}
 
 .home-lead{
   max-width:600px;
@@ -349,7 +397,6 @@ h2 span{color:var(--orange)}
   to{stroke-dashoffset:-58}
 }
 
-/* HOME CARDS */
 .home-cards{
   display:grid;
   grid-template-columns:repeat(3,1fr);
@@ -375,6 +422,122 @@ h2 span{color:var(--orange)}
 .home-card p{
   color:var(--muted);
   font-size:.9rem;
+}
+
+/* ABOUT */
+.about-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:55px;
+  align-items:start;
+}
+
+.about-text p{
+  margin-top:15px;
+  color:var(--muted);
+  font-size:1rem;
+}
+
+.about-highlights{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:13px;
+  margin-top:28px;
+}
+
+.about-highlight{
+  padding:18px;
+  background:#fff;
+  border:1px solid var(--line);
+  border-left:4px solid var(--orange);
+  box-shadow:0 5px 18px #092b4c0b;
+}
+
+.about-highlight strong{
+  display:block;
+  color:var(--navy);
+  font-size:1rem;
+}
+
+.about-highlight span{
+  display:block;
+  margin-top:4px;
+  color:var(--muted);
+  font-size:.8rem;
+}
+
+.mission-vision{
+  display:grid;
+  gap:18px;
+}
+
+.mv-card{
+  position:relative;
+  padding:30px 30px 30px 88px;
+  background:#fff;
+  border:1px solid var(--line);
+  border-top:4px solid var(--orange);
+  box-shadow:var(--shadow);
+}
+
+.mv-icon{
+  position:absolute;
+  left:25px;
+  top:27px;
+  width:45px;
+  height:45px;
+  display:grid;
+  place-items:center;
+  border-radius:50%;
+  background:var(--blue-light);
+  color:var(--blue);
+  font-size:1.35rem;
+  font-weight:800;
+}
+
+.mv-card h3{
+  margin-bottom:9px;
+  color:var(--navy);
+  font-size:1.45rem;
+}
+
+.mv-card p{
+  color:var(--muted);
+  font-size:.94rem;
+}
+
+.values-box{
+  padding:24px;
+  background:var(--navy);
+  color:#fff;
+  border-left:4px solid var(--orange);
+}
+
+.values-box h3{
+  margin-bottom:12px;
+  color:#fff;
+  font-size:1.3rem;
+}
+
+.values-box p{
+  color:#c9dce6;
+  font-size:.9rem;
+}
+
+.values-list{
+  display:flex;
+  flex-wrap:wrap;
+  gap:8px;
+  margin-top:17px;
+  list-style:none;
+}
+
+.values-list li{
+  padding:7px 11px;
+  border:1px solid #ffffff30;
+  border-radius:3px;
+  color:#fff;
+  font-size:.76rem;
 }
 
 /* PRODUCTS */
@@ -419,7 +582,9 @@ h2 span{color:var(--orange)}
   background:#ffffff15;
 }
 
-.product:hover:after{transform:scaleX(1)}
+.product:hover:after{
+  transform:scaleX(1);
+}
 
 .product-number{
   color:#ffad7d;
@@ -447,8 +612,7 @@ h2 span{color:var(--orange)}
   text-transform:uppercase;
 }
 
-/* PRODUCT DETAIL */
-.product-detail{
+.detail-grid{
   display:grid;
   grid-template-columns:repeat(3,1fr);
   gap:18px;
@@ -462,16 +626,6 @@ h2 span{color:var(--orange)}
   box-shadow:var(--shadow);
 }
 
-.detail-card h3{
-  margin:14px 0 8px;
-  color:var(--navy);
-}
-
-.detail-card p{
-  color:var(--muted);
-  font-size:.9rem;
-}
-
 .detail-icon{
   width:52px;
   height:52px;
@@ -482,7 +636,17 @@ h2 span{color:var(--orange)}
   font-size:1.6rem;
 }
 
-/* CLIENTS */
+.detail-card h3{
+  margin:14px 0 8px;
+  color:var(--navy);
+}
+
+.detail-card p{
+  color:var(--muted);
+  font-size:.9rem;
+}
+
+/* CLIENTELE */
 .client-layout{
   display:grid;
   grid-template-columns:.9fr 1.1fr;
@@ -563,6 +727,46 @@ h2 span{color:var(--orange)}
   text-transform:uppercase;
 }
 
+/* PLANTS SERVED */
+.plants-grid{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:15px;
+  margin-top:40px;
+}
+
+.plant-card{
+  min-height:155px;
+  padding:23px;
+  background:#ffffff0b;
+  border:1px solid #ffffff25;
+  transition:.25s;
+}
+
+.plant-card:hover{
+  background:#ffffff15;
+  border-color:var(--orange);
+  transform:translateY(-5px);
+}
+
+.plant-icon{
+  display:block;
+  margin-bottom:25px;
+  color:#ffad7d;
+  font-size:1.9rem;
+}
+
+.plant-card h3{
+  color:#fff;
+  font-size:1rem;
+}
+
+.plant-card p{
+  margin-top:6px;
+  color:#c2d6e1;
+  font-size:.8rem;
+}
+
 /* SERVICES */
 .service-grid{
   display:grid;
@@ -580,8 +784,8 @@ h2 span{color:var(--orange)}
 }
 
 .service-icon{
-  font-size:2rem;
   color:var(--blue);
+  font-size:2rem;
 }
 
 .service h3{
@@ -601,99 +805,90 @@ h2 span{color:var(--orange)}
   font-size:.86rem;
 }
 
-/* INDUSTRIES */
-.industry-grid{
+/* REVIEWS */
+.review-heading{
+  display:flex;
+  align-items:end;
+  justify-content:space-between;
+  gap:30px;
+  flex-wrap:wrap;
+}
+
+.review-grid{
   display:grid;
-  grid-template-columns:repeat(4,1fr);
-  gap:15px;
-  margin-top:40px;
-}
-
-.industry{
-  min-height:140px;
-  padding:22px;
-  background:#ffffff0b;
-  border:1px solid #ffffff25;
-  transition:.25s;
-}
-
-.industry:hover{
-  background:#ffffff15;
-  border-color:var(--orange);
-  transform:translateY(-5px);
-}
-
-.industry b{
-  display:block;
-  margin-bottom:25px;
-  color:#ffad7d;
-  font-size:1.8rem;
-}
-
-.industry h3{font-size:1rem}
-
-/* ABOUT */
-.about-grid{
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:60px;
-  align-items:start;
-}
-
-.about-text p{
-  margin-top:14px;
-  color:var(--muted);
-}
-
-.about-points{
-  display:grid;
-  gap:13px;
-  margin-top:25px;
-  list-style:none;
-}
-
-.about-points li{
-  padding:15px 18px;
-  background:#fff;
-  border-left:4px solid var(--orange);
-  box-shadow:0 5px 18px #092b4c0b;
-}
-
-.about-points li:before{
-  content:"✓";
-  margin-right:10px;
-  color:var(--orange);
-  font-weight:800;
-}
-
-.timeline{display:grid;gap:18px}
-
-.timeline-item{
-  display:grid;
-  grid-template-columns:78px 1fr;
+  grid-template-columns:repeat(3,1fr);
   gap:18px;
-  align-items:start;
+  margin-top:38px;
 }
 
-.timeline-year{
-  padding:11px 5px;
-  text-align:center;
+.review-card{
+  position:relative;
+  min-height:245px;
+  padding:27px;
+  background:#fff;
+  border:1px solid var(--line);
+  border-top:4px solid var(--orange);
+  box-shadow:var(--shadow);
+}
+
+.review-card:before{
+  content:"“";
+  position:absolute;
+  top:7px;
+  right:20px;
+  color:#DCEBF2;
+  font-family:Georgia,serif;
+  font-size:5rem;
+  line-height:1;
+}
+
+.stars{
+  color:var(--orange);
+  letter-spacing:3px;
+}
+
+.review-card blockquote{
+  position:relative;
+  z-index:1;
+  margin:17px 0 22px;
+  color:var(--muted);
+  font-size:.94rem;
+  font-style:italic;
+}
+
+.review-person{
+  display:flex;
+  align-items:center;
+  gap:12px;
+  padding-top:15px;
+  border-top:1px solid var(--line);
+}
+
+.avatar{
+  width:40px;
+  height:40px;
+  display:grid;
+  place-items:center;
+  border-radius:50%;
   background:var(--navy);
   color:#fff;
+  font-size:.8rem;
   font-weight:800;
 }
 
-.timeline-item h3{
-  margin-bottom:4px;
+.review-person strong{
+  display:block;
   color:var(--navy);
+  font-size:.86rem;
 }
 
-.timeline-item p{
+.review-person small{
+  display:block;
   color:var(--muted);
-  font-size:.9rem;
+  font-size:.73rem;
 }
 
-/* QUOTE AND CONTACT */
+/* CONTACT AND QUOTE */
 .quote-contact{
   display:grid;
   grid-template-columns:.85fr 1.15fr;
@@ -714,6 +909,35 @@ h2 span{color:var(--orange)}
   margin-right:9px;
   color:#ffad7d;
   font-weight:800;
+}
+
+.contact-details{
+  display:grid;
+  gap:13px;
+  margin-top:25px;
+}
+
+.contact-item{
+  padding:17px 20px;
+  background:#ffffff12;
+  border:1px solid #ffffff28;
+  border-left:4px solid var(--orange);
+}
+
+.contact-item small{
+  display:block;
+  margin-bottom:4px;
+  color:#ffad7d;
+  font-weight:800;
+  font-size:.7rem;
+  letter-spacing:.12em;
+  text-transform:uppercase;
+}
+
+.contact-item a,
+.contact-item span{
+  color:#fff;
+  font-weight:600;
 }
 
 .quote-form{
@@ -754,7 +978,7 @@ h2 span{color:var(--orange)}
 }
 
 .quote-form textarea{
-  min-height:105px;
+  min-height:110px;
   margin-top:12px;
   resize:vertical;
 }
@@ -773,145 +997,19 @@ h2 span{color:var(--orange)}
   cursor:pointer;
 }
 
-.quote-form button:hover{background:var(--orange-dark)}
-
-.contact-details{
-  display:grid;
-  gap:13px;
-  margin-top:25px;
+.quote-form button:hover{
+  background:var(--orange-dark);
 }
 
-.contact-item{
-  padding:17px 20px;
-  background:#ffffff12;
-  border:1px solid #ffffff28;
-  border-left:4px solid var(--orange);
-}
-
-.contact-item small{
-  display:block;
-  margin-bottom:4px;
-  color:#ffad7d;
-  font-weight:800;
-  font-size:.7rem;
-  letter-spacing:.12em;
-  text-transform:uppercase;
-}
-
-.contact-item a,
-.contact-item span{
-  color:#fff;
-  font-weight:600;
-}
-
-/* TESTIMONIALS AND LOGOS */
-.footer-proof{
-  padding:78px 0 55px;
+/* CLIENT LOGOS */
+.logo-section{
+  padding:70px 0;
   background:#EAF3F8;
   border-top:1px solid var(--line);
 }
 
-.footer-proof-head{
-  display:flex;
-  align-items:end;
-  justify-content:space-between;
-  gap:25px;
-  flex-wrap:wrap;
-  margin-bottom:32px;
-}
-
-.footer-proof-head h2{
-  margin:9px 0 0;
-  color:var(--navy);
-  font-size:clamp(2rem,4vw,3.2rem);
-  line-height:1.05;
-}
-
-.footer-proof-head h2 span{color:var(--orange)}
-
-.footer-proof-note{
-  max-width:400px;
-  color:var(--muted);
-  font-size:.9rem;
-}
-
-.testimonial-grid{
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:18px;
-}
-
-.testimonial-card{
-  position:relative;
-  min-height:245px;
-  padding:27px;
-  background:#fff;
-  border:1px solid var(--line);
-  border-top:4px solid var(--orange);
-  box-shadow:var(--shadow);
-}
-
-.testimonial-card:before{
-  content:"“";
-  position:absolute;
-  top:8px;
-  right:21px;
-  color:#DCEBF2;
-  font-family:Georgia,serif;
-  font-size:5rem;
-  line-height:1;
-}
-
-.testimonial-stars{
-  color:var(--orange);
-  font-size:.9rem;
-  letter-spacing:3px;
-}
-
-.testimonial-card blockquote{
-  position:relative;
-  z-index:1;
-  margin:18px 0 23px;
-  color:var(--muted);
-  font-size:.94rem;
-  font-style:italic;
-  line-height:1.7;
-}
-
-.testimonial-person{
-  display:flex;
-  align-items:center;
-  gap:12px;
-  padding-top:15px;
-  border-top:1px solid var(--line);
-}
-
-.testimonial-avatar{
-  width:40px;
-  height:40px;
-  display:grid;
-  place-items:center;
-  border-radius:50%;
-  background:var(--navy);
-  color:#fff;
-  font-weight:800;
-  font-size:.82rem;
-}
-
-.testimonial-person strong{
-  display:block;
-  color:var(--navy);
-  font-size:.86rem;
-}
-
-.testimonial-person small{
-  display:block;
-  color:var(--muted);
-  font-size:.73rem;
-}
-
-.client-logo-title{
-  margin:60px 0 20px;
+.logo-heading{
+  margin-bottom:22px;
   color:var(--navy);
   font-size:.76rem;
   font-weight:800;
@@ -920,14 +1018,14 @@ h2 span{color:var(--orange)}
   text-transform:uppercase;
 }
 
-.client-logo-strip{
+.logo-strip{
   display:grid;
   grid-template-columns:repeat(6,1fr);
   border:1px solid var(--line);
   background:#fff;
 }
 
-.client-logo{
+.logo-box{
   min-height:90px;
   padding:15px;
   display:flex;
@@ -937,27 +1035,31 @@ h2 span{color:var(--orange)}
   transition:.25s;
 }
 
-.client-logo:last-child{border-right:0}
+.logo-box:last-child{
+  border-right:0;
+}
 
-.client-logo:hover{background:var(--blue-light)}
+.logo-box:hover{
+  background:var(--blue-light);
+}
 
-.client-logo img{
+.logo-box img{
   max-width:115px;
-  max-height:47px;
+  max-height:48px;
   object-fit:contain;
   filter:grayscale(100%);
-  opacity:.62;
+  opacity:.65;
   transition:.25s;
 }
 
-.client-logo:hover img{
+.logo-box:hover img{
   filter:grayscale(0);
   opacity:1;
 }
 
-.client-logo-fallback{
+.logo-name{
   color:var(--navy);
-  font-size:.75rem;
+  font-size:.74rem;
   font-weight:800;
   letter-spacing:.04em;
   text-align:center;
@@ -979,8 +1081,24 @@ footer{
   flex-wrap:wrap;
 }
 
-footer strong{color:#fff}
-footer small{font-size:.78rem}
+footer strong{
+  color:#fff;
+}
+
+footer small{
+  font-size:.78rem;
+}
+
+.footer-links{
+  display:flex;
+  gap:17px;
+  flex-wrap:wrap;
+  font-size:.78rem;
+}
+
+.footer-links a:hover{
+  color:#ffad7d;
+}
 
 .floating{
   position:fixed;
@@ -996,16 +1114,20 @@ footer small{font-size:.78rem}
   box-shadow:0 8px 25px #092b4c45;
 }
 
-.floating:hover{background:var(--orange-dark)}
+.floating:hover{
+  background:var(--orange-dark);
+}
 
-/* RESPONSIVE */
+/* TABLET */
 @media(max-width:900px){
   .topbar .container{
     justify-content:center;
     text-align:center;
   }
 
-  .top-email{display:none}
+  .top-email{
+    display:none;
+  }
 
   .nav-links{
     display:none;
@@ -1022,91 +1144,151 @@ footer small{font-size:.78rem}
     box-shadow:var(--shadow);
   }
 
-  .nav-links.open{display:flex}
-  .nav-links a{display:block;padding:14px}
-  .menu{display:block}
+  .nav-links.open{
+    display:flex;
+  }
+
+  .nav-links a{
+    display:block;
+    padding:14px;
+  }
+
+  .menu{
+    display:block;
+  }
 
   .home-grid,
-  .client-layout,
   .about-grid,
+  .client-layout,
   .quote-contact{
     grid-template-columns:1fr;
   }
 
-  .home-content{text-align:center}
-  .home-lead{margin:auto}
-  .buttons,.home-stats{justify-content:center}
+  .home-content{
+    text-align:center;
+  }
+
+  .home-lead{
+    margin:auto;
+  }
+
+  .buttons,
+  .home-stats{
+    justify-content:center;
+  }
 
   .hero-visual{
     order:-1;
     min-height:285px;
   }
 
-  .valve-svg{max-width:350px}
+  .valve-svg{
+    max-width:350px;
+  }
 
   .product-grid,
-  .product-detail,
+  .detail-grid,
   .service-grid,
-  .testimonial-grid{
+  .review-grid{
     grid-template-columns:repeat(2,1fr);
   }
 
-  .industry-grid{grid-template-columns:repeat(2,1fr)}
+  .plants-grid{
+    grid-template-columns:repeat(2,1fr);
+  }
 
-  .client-logo-strip{grid-template-columns:repeat(3,1fr)}
+  .logo-strip{
+    grid-template-columns:repeat(3,1fr);
+  }
 
-  .client-logo:nth-child(3){border-right:0}
+  .logo-box:nth-child(3){
+    border-right:0;
+  }
 
-  .client-logo:nth-child(-n+3){
+  .logo-box:nth-child(-n+3){
     border-bottom:1px solid var(--line);
   }
 }
 
+/* MOBILE */
 @media(max-width:560px){
-  .container{width:90%}
-
-  .page-section{
-    min-height:0;
-    padding:80px 0 65px;
+  .container{
+    width:90%;
   }
 
-  .brand strong{font-size:.82rem}
-  .brand small{font-size:.55rem}
-  .home-content h1{font-size:3.3rem}
+  .section{
+    padding:75px 0 60px;
+  }
 
+  #home{
+    min-height:0;
+  }
+
+  .brand strong{
+    font-size:.82rem;
+  }
+
+  .brand small{
+    font-size:.55rem;
+  }
+
+  .home-content h1{
+    font-size:3.25rem;
+  }
+
+  .home-cards,
   .product-grid,
-  .product-detail,
-  .service-grid,
-  .industry-grid,
+  .detail-grid,
   .client-list,
-  .form-grid,
-  .testimonial-grid{
+  .service-grid,
+  .plants-grid,
+  .review-grid,
+  .form-grid{
     grid-template-columns:1fr;
   }
 
-  .home-cards{grid-template-columns:1fr}
+  .about-highlights{
+    grid-template-columns:1fr;
+  }
 
-  .client-numbers{grid-template-columns:1fr 1fr}
+  .mv-card{
+    padding:25px 22px 25px 76px;
+  }
 
-  .quote-form{padding:22px}
+  .mv-icon{
+    left:20px;
+    top:23px;
+  }
 
-  .footer-proof{padding:60px 0 40px}
+  .client-numbers{
+    grid-template-columns:1fr 1fr;
+  }
 
-  .client-logo-strip{grid-template-columns:repeat(2,1fr)}
+  .quote-form{
+    padding:22px;
+  }
 
-  .client-logo{
+  .logo-strip{
+    grid-template-columns:repeat(2,1fr);
+  }
+
+  .logo-box{
     min-height:78px;
     border-right:1px solid var(--line);
     border-bottom:1px solid var(--line);
   }
 
-  .client-logo:nth-child(3){
+  .logo-box:nth-child(3){
     border-right:1px solid var(--line);
   }
 
-  .client-logo:nth-child(even){border-right:0}
+  .logo-box:nth-child(even){
+    border-right:0;
+  }
 
-  .client-logo:nth-last-child(-n+2){border-bottom:0}
+  .logo-box:nth-last-child(-n+2){
+    border-bottom:0;
+  }
 
   .floating{
     right:12px;
@@ -1123,19 +1305,26 @@ footer small{font-size:.78rem}
 <div class="topbar">
   <div class="container">
     <span>Industrial Flow-Control Solutions Since 1994</span>
+
     <span class="top-email">
-      <a href="mailto:sriindustrialvalves@gmail.com">sriindustrialvalves@gmail.com</a>
+      <a href="mailto:sriindustrialvalves@gmail.com">
+        sriindustrialvalves@gmail.com
+      </a>
       &nbsp; | &nbsp;
-      <a href="tel:+918903479387">+91 89034 79387</a>
+      <a href="tel:+918903479387">
+        +91 89034 79387
+      </a>
     </span>
   </div>
 </div>
 
-<!-- HEADER -->
+<!-- NAVIGATION -->
 <header class="header">
   <div class="container nav">
+
     <a class="brand" href="#home">
       <img src="logo.png" alt="S.R.I Industrial Valves logo">
+
       <div>
         <strong>S.R.I Industrial Valves</strong>
         <small>INDUSTRIAL FLOW SOLUTIONS</small>
@@ -1150,22 +1339,25 @@ footer small{font-size:.78rem}
 
     <ul class="nav-links" id="navLinks">
       <li><a href="#home">Home</a></li>
+      <li><a href="#about">About Us</a></li>
       <li><a href="#products">Products</a></li>
-      <li><a href="#clients">Clients</a></li>
+      <li><a href="#clients">Clientele</a></li>
+      <li><a href="#plants">Plants Served</a></li>
       <li><a href="#services">Services</a></li>
-      <li><a href="#about">Company</a></li>
-      <li><a href="#testimonials">Testimonials</a></li>
+      <li><a href="#reviews">Reviews</a></li>
       <li><a href="#contact">Contact</a></li>
-      <li><a class="quote-link" href="#quote">Request Quote</a></li>
+      <li><a class="quote-link" href="#quote">Get Quote</a></li>
     </ul>
+
   </div>
 </header>
 
 <main>
 
 <!-- HOME -->
-<section class="page-section" id="home">
+<section class="section" id="home">
   <div class="container">
+
     <div class="home-grid">
 
       <div class="home-content">
@@ -1190,10 +1382,12 @@ footer small{font-size:.78rem}
             <strong>30+</strong>
             <small>Years Experience</small>
           </div>
+
           <div>
             <strong>500+</strong>
             <small>Clients Served</small>
           </div>
+
           <div>
             <strong>1000+</strong>
             <small>Products Supplied</small>
@@ -1203,6 +1397,7 @@ footer small{font-size:.78rem}
 
       <div class="hero-visual">
         <svg class="valve-svg" viewBox="0 0 500 350" xmlns="http://www.w3.org/2000/svg" aria-label="Industrial valve illustration">
+
           <rect class="pipe" x="10" y="157" width="155" height="42" rx="4"/>
           <rect class="pipe" x="335" y="157" width="155" height="42" rx="4"/>
 
@@ -1213,7 +1408,12 @@ footer small{font-size:.78rem}
           <path class="flow" d="M360 178h110"/>
 
           <path class="body" d="M160 158 Q160 125 250 120 Q340 125 340 158 L340 218 Q340 258 250 266 Q160 258 160 218Z"/>
-          <path d="M180 150 Q250 130 320 150" fill="none" stroke="#fff" stroke-opacity=".6" stroke-width="3"/>
+
+          <path d="M180 150 Q250 130 320 150"
+                fill="none"
+                stroke="#fff"
+                stroke-opacity=".6"
+                stroke-width="3"/>
 
           <rect class="metal" x="230" y="65" width="40" height="67" rx="4"/>
           <rect class="metal" x="215" y="125" width="70" height="14" rx="3"/>
@@ -1231,7 +1431,7 @@ footer small{font-size:.78rem}
     <div class="home-cards">
       <div class="home-card">
         <b>Product Expertise</b>
-        <p>Support for selecting the right valve for your media, pressure, temperature and application.</p>
+        <p>Support for selecting the right valve for media, pressure, temperature and application.</p>
       </div>
 
       <div class="home-card">
@@ -1244,11 +1444,103 @@ footer small{font-size:.78rem}
         <p>Dependable supply for critical operations where performance and delivery matter.</p>
       </div>
     </div>
+
+  </div>
+</section>
+
+<!-- ABOUT US, MISSION AND VISION -->
+<section class="section section-light" id="about">
+  <div class="container about-grid">
+
+    <div class="about-text">
+      <div class="section-label">About S.R.I Industrial Valves</div>
+
+      <h2>
+        Experience that supports
+        <span>better decisions.</span>
+      </h2>
+
+      <p>
+        S.R.I Industrial Valves is an industrial valve supplier serving process plants, manufacturers, utilities, engineering companies and maintenance teams.
+      </p>
+
+      <p>
+        We help customers identify suitable valve products for isolation, regulation, protection and flow-control applications.
+      </p>
+
+      <p>
+        Our focus is simple: understand the requirement, recommend a suitable solution and provide clear quotation support.
+      </p>
+
+      <div class="about-highlights">
+        <div class="about-highlight">
+          <strong>Reliable Supply</strong>
+          <span>Products selected around your requirement.</span>
+        </div>
+
+        <div class="about-highlight">
+          <strong>Technical Support</strong>
+          <span>Guidance for application and product selection.</span>
+        </div>
+
+        <div class="about-highlight">
+          <strong>Clear Communication</strong>
+          <span>Simple and professional quotation support.</span>
+        </div>
+
+        <div class="about-highlight">
+          <strong>Long-Term Focus</strong>
+          <span>Relationships built on trust and service.</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="mission-vision">
+
+      <article class="mv-card">
+        <div class="mv-icon">◎</div>
+
+        <h3>Our Mission</h3>
+
+        <p>
+          To provide dependable industrial valve solutions with responsive service, practical product guidance and clear commercial support, helping customers maintain safe and efficient operations.
+        </p>
+      </article>
+
+      <article class="mv-card">
+        <div class="mv-icon">↗</div>
+
+        <h3>Our Vision</h3>
+
+        <p>
+          To become a trusted and preferred flow-control partner for industrial customers by continuously improving our product knowledge, service quality and customer experience.
+        </p>
+      </article>
+
+      <div class="values-box">
+        <h3>Our Core Values</h3>
+
+        <p>
+          Every customer interaction is guided by the following principles:
+        </p>
+
+        <ul class="values-list">
+          <li>Reliability</li>
+          <li>Quality Focus</li>
+          <li>Integrity</li>
+          <li>Responsiveness</li>
+          <li>Customer Care</li>
+          <li>Continuous Improvement</li>
+        </ul>
+      </div>
+
+    </div>
+
   </div>
 </section>
 
 <!-- PRODUCTS -->
-<section class="page-section dark" id="products">
+<section class="section section-dark" id="products">
   <div class="container">
 
     <div class="product-heading">
@@ -1258,11 +1550,12 @@ footer small{font-size:.78rem}
       </div>
 
       <p class="intro">
-        Choose reliable flow-control products for isolation, regulation, protection and precision applications.
+        Reliable flow-control products for isolation, regulation, protection and precision applications.
       </p>
     </div>
 
     <div class="product-grid">
+
       <article class="product">
         <div class="product-number">01 / ISOLATION</div>
         <h3>Ball Valves</h3>
@@ -1304,21 +1597,24 @@ footer small{font-size:.78rem}
         <p>Fine flow control and isolation for instrumentation and process systems.</p>
         <a href="#quote">Enquire now →</a>
       </article>
+
     </div>
   </div>
 </section>
 
 <!-- PRODUCT DETAILS -->
-<section class="page-section light" id="product-range">
+<section class="section section-light">
   <div class="container">
+
     <div class="section-label">Product Information</div>
     <h2>Built for dependable <span>industrial service.</span></h2>
 
     <p class="intro">
-      Share your application details with our team for a suitable recommendation.
+      Share your application details with our team for a suitable product recommendation.
     </p>
 
-    <div class="product-detail">
+    <div class="detail-grid">
+
       <div class="detail-card">
         <div class="detail-icon">⚙</div>
         <h3>Materials</h3>
@@ -1336,24 +1632,30 @@ footer small{font-size:.78rem}
         <h3>Specifications</h3>
         <p>Share size, pressure class, temperature, media, end connection and quantity for accurate quotation support.</p>
       </div>
+
     </div>
 
     <div class="buttons">
       <a class="btn" href="#quote">Request Product Details</a>
     </div>
+
   </div>
 </section>
 
-<!-- CLIENTS -->
-<section class="page-section" id="clients">
+<!-- CLIENTELE -->
+<section class="section" id="clients">
   <div class="container client-layout">
 
     <div>
-      <div class="section-label">Clients & Industries</div>
-      <h2>Supporting teams that keep <span>industry moving.</span></h2>
+      <div class="section-label">Our Clientele</div>
+
+      <h2>
+        Supporting teams that keep
+        <span>industry moving.</span>
+      </h2>
 
       <p class="intro">
-        We work with procurement, maintenance, engineering and project teams across industrial sectors.
+        We support procurement, maintenance, engineering and project teams across industrial sectors.
       </p>
 
       <div class="client-list">
@@ -1390,8 +1692,11 @@ footer small{font-size:.78rem}
     </div>
 
     <div class="client-visual">
-      <div class="section-label">Why Customers Choose Us</div>
-      <h3>Practical support. Clear communication. Reliable supply.</h3>
+      <div class="section-label">Customer Support</div>
+
+      <h3>
+        Practical support. Clear communication. Reliable supply.
+      </h3>
 
       <p>
         Our aim is to make valve sourcing easier for the people responsible for plant performance, maintenance and purchasing.
@@ -1400,7 +1705,7 @@ footer small{font-size:.78rem}
       <div class="client-numbers">
         <div class="client-number">
           <strong>30+</strong>
-          <span>Years of experience</span>
+          <span>Years experience</span>
         </div>
 
         <div class="client-number">
@@ -1423,17 +1728,92 @@ footer small{font-size:.78rem}
   </div>
 </section>
 
-<!-- SERVICES -->
-<section class="page-section light" id="services">
+<!-- PLANTS SERVED -->
+<section class="section section-dark" id="plants">
   <div class="container">
+
+    <div class="section-label">Plants We Serve</div>
+
+    <h2>
+      Flow-control support for
+      <span>critical plant operations.</span>
+    </h2>
+
+    <p class="intro">
+      Our products and service support different plant environments, utility systems and industrial process requirements.
+    </p>
+
+    <div class="plants-grid">
+
+      <div class="plant-card">
+        <span class="plant-icon">⚗</span>
+        <h3>Chemical Plants</h3>
+        <p>Process lines, chemical transfer and isolation applications.</p>
+      </div>
+
+      <div class="plant-card">
+        <span class="plant-icon">✚</span>
+        <h3>Pharmaceutical Plants</h3>
+        <p>Process utilities, water systems and production support.</p>
+      </div>
+
+      <div class="plant-card">
+        <span class="plant-icon">≋</span>
+        <h3>Water Treatment Plants</h3>
+        <p>Water, wastewater, filtration and pipeline applications.</p>
+      </div>
+
+      <div class="plant-card">
+        <span class="plant-icon">◈</span>
+        <h3>Manufacturing Plants</h3>
+        <p>Plant maintenance, utility lines and replacement requirements.</p>
+      </div>
+
+      <div class="plant-card">
+        <span class="plant-icon">⌁</span>
+        <h3>Oil & Gas Facilities</h3>
+        <p>Industrial pipeline, transfer and process applications.</p>
+      </div>
+
+      <div class="plant-card">
+        <span class="plant-icon">▣</span>
+        <h3>Power and Utility Plants</h3>
+        <p>Steam, water, cooling and general utility services.</p>
+      </div>
+
+      <div class="plant-card">
+        <span class="plant-icon">⚒</span>
+        <h3>Engineering Projects</h3>
+        <p>Project procurement, replacement and equipment supply.</p>
+      </div>
+
+      <div class="plant-card">
+        <span class="plant-icon">◆</span>
+        <h3>Process Industries</h3>
+        <p>Flow-control needs for demanding industrial environments.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section class="section section-light" id="services">
+  <div class="container">
+
     <div class="section-label">Services</div>
-    <h2>More than a supplier. <span>Your flow-control partner.</span></h2>
+
+    <h2>
+      More than a supplier.
+      <span>Your flow-control partner.</span>
+    </h2>
 
     <p class="intro">
       From valve identification to quotation and delivery coordination, our service is designed around your requirement.
     </p>
 
     <div class="service-grid">
+
       <div class="service">
         <div class="service-icon">⌕</div>
         <h3>Product Identification</h3>
@@ -1466,93 +1846,97 @@ footer small{font-size:.78rem}
           <li>Delivery coordination</li>
         </ul>
       </div>
+
     </div>
   </div>
 </section>
 
-<!-- INDUSTRIES -->
-<section class="page-section dark" id="industries">
+<!-- REVIEWS -->
+<section class="section" id="reviews">
   <div class="container">
-    <div class="section-label">Applications</div>
-    <h2>Solutions across <span>critical industries.</span></h2>
 
-    <p class="intro">
-      Industrial valve requirements vary by process. Tell us about your application and we will guide you to the right product category.
-    </p>
+    <div class="review-heading">
+      <div>
+        <div class="section-label">Customer Reviews</div>
+        <h2>
+          Trusted by teams that value
+          <span>reliability.</span>
+        </h2>
+      </div>
 
-    <div class="industry-grid">
-      <div class="industry"><b>⚗</b><h3>Chemical Processing</h3></div>
-      <div class="industry"><b>✚</b><h3>Pharmaceuticals</h3></div>
-      <div class="industry"><b>≋</b><h3>Water Treatment</h3></div>
-      <div class="industry"><b>◈</b><h3>Manufacturing</h3></div>
-      <div class="industry"><b>⌁</b><h3>Oil & Gas</h3></div>
-      <div class="industry"><b>▣</b><h3>Utilities</h3></div>
-      <div class="industry"><b>⚒</b><h3>Engineering Projects</h3></div>
-      <div class="industry"><b>◆</b><h3>Process Plants</h3></div>
-    </div>
-  </div>
-</section>
-
-<!-- ABOUT -->
-<section class="page-section light" id="about">
-  <div class="container about-grid">
-
-    <div class="about-text">
-      <div class="section-label">About S.R.I</div>
-      <h2>Experience that supports <span>better decisions.</span></h2>
-
-      <p>
-        S.R.I Industrial Valves serves industrial customers with valve products and flow-control support for plant, process and maintenance requirements.
+      <p class="intro">
+        Replace the sample reviews below with approved feedback from your actual customers.
       </p>
-
-      <p>
-        Our focus is straightforward: understand the requirement, recommend a suitable solution and provide responsive commercial support.
-      </p>
-
-      <ul class="about-points">
-        <li>Customer-focused product guidance</li>
-        <li>Professional quotation response</li>
-        <li>Industrial application understanding</li>
-        <li>Long-term customer relationships</li>
-      </ul>
     </div>
 
-    <div class="timeline">
-      <div class="timeline-item">
-        <div class="timeline-year">1994</div>
-        <div>
-          <h3>Established</h3>
-          <p>S.R.I begins its journey in industrial valve supply and customer service.</p>
-        </div>
-      </div>
+    <div class="review-grid">
 
-      <div class="timeline-item">
-        <div class="timeline-year">30+</div>
-        <div>
-          <h3>Years of Experience</h3>
-          <p>Continued service to industrial, manufacturing and process customers.</p>
-        </div>
-      </div>
+      <article class="review-card">
+        <div class="stars">★★★★★</div>
 
-      <div class="timeline-item">
-        <div class="timeline-year">Today</div>
-        <div>
-          <h3>Growing with Customers</h3>
-          <p>Building a professional digital experience for faster enquiries and better support.</p>
+        <blockquote>
+          “The S.R.I team understood our valve requirement clearly and provided prompt support for our maintenance enquiry.”
+        </blockquote>
+
+        <div class="review-person">
+          <div class="avatar">MT</div>
+
+          <div>
+            <strong>Maintenance Team</strong>
+            <small>Industrial Manufacturing Customer</small>
+          </div>
         </div>
-      </div>
+      </article>
+
+      <article class="review-card">
+        <div class="stars">★★★★★</div>
+
+        <blockquote>
+          “Professional communication, useful product guidance and a smooth quotation process for our plant requirement.”
+        </blockquote>
+
+        <div class="review-person">
+          <div class="avatar">PE</div>
+
+          <div>
+            <strong>Purchase Engineer</strong>
+            <small>Process Industry Customer</small>
+          </div>
+        </div>
+      </article>
+
+      <article class="review-card">
+        <div class="stars">★★★★★</div>
+
+        <blockquote>
+          “Their team helped us understand the right valve category for our application and responded quickly.”
+        </blockquote>
+
+        <div class="review-person">
+          <div class="avatar">ET</div>
+
+          <div>
+            <strong>Engineering Team</strong>
+            <small>Pharmaceutical Industry Customer</small>
+          </div>
+        </div>
+      </article>
+
     </div>
-
   </div>
 </section>
 
 <!-- CONTACT AND QUOTE -->
-<section class="page-section blue" id="contact">
+<section class="section section-blue" id="contact">
   <div class="container quote-contact">
 
     <div id="quote">
-      <div class="section-label">Contact & Enquiry</div>
-      <h2>Let’s discuss your <span>valve requirement.</span></h2>
+      <div class="section-label">Contact & Quotation</div>
+
+      <h2>
+        Let’s discuss your
+        <span>valve requirement.</span>
+      </h2>
 
       <p class="intro">
         Send your requirement and our team will contact you with product information, availability and quotation support.
@@ -1575,12 +1959,19 @@ footer small{font-size:.78rem}
 
         <div class="contact-item">
           <small>Email</small>
-          <a href="mailto:sriindustrialvalves@gmail.com">sriindustrialvalves@gmail.com</a>
+          <a href="mailto:sriindustrialvalves@gmail.com">
+            sriindustrialvalves@gmail.com
+          </a>
         </div>
 
         <div class="contact-item">
           <small>Location</small>
           <span>Ranipet District, Tamil Nadu – 632 404</span>
+        </div>
+
+        <div class="contact-item">
+          <small>Working Hours</small>
+          <span>Monday to Saturday — 9:00 AM to 6:00 PM</span>
         </div>
       </div>
     </div>
@@ -1610,119 +2001,48 @@ footer small{font-size:.78rem}
 
       <textarea name="message" placeholder="Size, material, pressure rating, media, quantity or other requirement"></textarea>
 
-      <button type="submit">Send Enquiry on WhatsApp</button>
+      <button type="submit">
+        Send Enquiry on WhatsApp
+      </button>
     </form>
 
   </div>
 </section>
 
-<!-- TESTIMONIALS AND CLIENT LOGOS -->
-<section class="footer-proof" id="testimonials">
+<!-- CLIENT LOGOS -->
+<section class="logo-section">
   <div class="container">
 
-    <div class="footer-proof-head">
-      <div>
-        <div class="section-label">Customer Confidence</div>
-        <h2>Trusted by teams that value <span>reliability.</span></h2>
-      </div>
-
-      <p class="footer-proof-note">
-        Our customers rely on us for product guidance, quotation support and dependable industrial valve supply.
-      </p>
-    </div>
-
-    <div class="testimonial-grid">
-
-      <article class="testimonial-card">
-        <div class="testimonial-stars">★★★★★</div>
-
-        <blockquote>
-          “The S.R.I team understood our valve requirement clearly and provided prompt support for our maintenance enquiry.”
-        </blockquote>
-
-        <div class="testimonial-person">
-          <div class="testimonial-avatar">MT</div>
-          <div>
-            <strong>Maintenance Team</strong>
-            <small>Industrial Manufacturing Customer</small>
-          </div>
-        </div>
-      </article>
-
-      <article class="testimonial-card">
-        <div class="testimonial-stars">★★★★★</div>
-
-        <blockquote>
-          “Professional communication, useful product guidance and a smooth quotation process for our plant requirement.”
-        </blockquote>
-
-        <div class="testimonial-person">
-          <div class="testimonial-avatar">PE</div>
-          <div>
-            <strong>Purchase Engineer</strong>
-            <small>Process Industry Customer</small>
-          </div>
-        </div>
-      </article>
-
-      <article class="testimonial-card">
-        <div class="testimonial-stars">★★★★★</div>
-
-        <blockquote>
-          “Their team helped us understand the right valve category for our application and responded quickly.”
-        </blockquote>
-
-        <div class="testimonial-person">
-          <div class="testimonial-avatar">ET</div>
-          <div>
-            <strong>Engineering Team</strong>
-            <small>Pharmaceutical Industry Customer</small>
-          </div>
-        </div>
-      </article>
-
-    </div>
-
-    <div class="client-logo-title">
+    <div class="logo-heading">
       Selected Customers & Industry Partners
     </div>
 
-    <div class="client-logo-strip">
+    <div class="logo-strip">
 
-      <div class="client-logo">
-        <img src="logos/malladi.png" alt="Malladi Drugs and Pharmaceuticals logo"
-             onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
-        <span class="client-logo-fallback" style="display:none">Malladi Drugs</span>
+      <!-- Replace these names with approved customer logos if available -->
+
+      <div class="logo-box">
+        <span class="logo-name">Malladi Drugs</span>
       </div>
 
-      <div class="client-logo">
-        <img src="logos/lloyd.png" alt="Lloyd Pharmalabs logo"
-             onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
-        <span class="client-logo-fallback" style="display:none">Lloyd Pharmalabs</span>
+      <div class="logo-box">
+        <span class="logo-name">Lloyd Pharmalabs</span>
       </div>
 
-      <div class="client-logo">
-        <img src="logos/maithili.png" alt="Maithili Life Sciences logo"
-             onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
-        <span class="client-logo-fallback" style="display:none">Maithili Life Sciences</span>
+      <div class="logo-box">
+        <span class="logo-name">Maithili Life Sciences</span>
       </div>
 
-      <div class="client-logo">
-        <img src="logos/phanicare.png" alt="Phanicare logo"
-             onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
-        <span class="client-logo-fallback" style="display:none">Phanicare</span>
+      <div class="logo-box">
+        <span class="logo-name">Phanicare</span>
       </div>
 
-      <div class="client-logo">
-        <img src="logos/mahaveer.png" alt="Mahaveer Surfactants logo"
-             onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
-        <span class="client-logo-fallback" style="display:none">Mahaveer Surfactants</span>
+      <div class="logo-box">
+        <span class="logo-name">Mahaveer Surfactants</span>
       </div>
 
-      <div class="client-logo">
-        <img src="logos/stabilitas.png" alt="Stabilitas Solvents logo"
-             onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
-        <span class="client-logo-fallback" style="display:none">Stabilitas Solvents</span>
+      <div class="logo-box">
+        <span class="logo-name">Stabilitas Solvents</span>
       </div>
 
     </div>
@@ -1734,39 +2054,51 @@ footer small{font-size:.78rem}
 <!-- FOOTER -->
 <footer>
   <div class="container footer-inner">
+
     <div>
       <strong>S.R.I Industrial Valves</strong><br>
       <small>Industrial flow-control solutions since 1994</small>
     </div>
 
+    <div class="footer-links">
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#products">Products</a>
+      <a href="#services">Services</a>
+      <a href="#contact">Contact</a>
+    </div>
+
     <small>
       © 2026 S.R.I Industrial Valves. All Rights Reserved.
     </small>
+
   </div>
 </footer>
 
-<a class="floating" href="#quote">Request a Quote</a>
+<a class="floating" href="#quote">
+  Request a Quote
+</a>
 
 <script>
-const menu=document.getElementById("menu");
-const navLinks=document.getElementById("navLinks");
+const menu = document.getElementById("menu");
+const navLinks = document.getElementById("navLinks");
 
-menu.addEventListener("click",function(){
+menu.addEventListener("click", function(){
   navLinks.classList.toggle("open");
 });
 
 document.querySelectorAll(".nav-links a").forEach(function(link){
-  link.addEventListener("click",function(){
+  link.addEventListener("click", function(){
     navLinks.classList.remove("open");
   });
 });
 
-document.getElementById("quoteForm").addEventListener("submit",function(event){
+document.getElementById("quoteForm").addEventListener("submit", function(event){
   event.preventDefault();
 
-  const data=new FormData(this);
+  const data = new FormData(this);
 
-  const message=
+  const message =
 `Hello S.R.I Industrial Valves,
 
 I would like to request a quotation.
@@ -1779,10 +2111,11 @@ Product: ${data.get("product")}
 Quantity: ${data.get("quantity")}
 Requirement: ${data.get("message")}`;
 
-  const whatsappUrl=
-    "https://wa.me/918903479387?text="+encodeURIComponent(message);
+  const whatsappNumber = "918754110059";
+  const whatsappUrl =
+    "https://wa.me/" + whatsappNumber + "?text=" + encodeURIComponent(message);
 
-  window.open(whatsappUrl,"_blank");
+  window.open(whatsappUrl, "_blank");
 });
 </script>
 
